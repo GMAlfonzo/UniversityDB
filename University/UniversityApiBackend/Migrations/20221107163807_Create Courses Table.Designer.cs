@@ -12,8 +12,8 @@ using UniversityApiBackend.DataAccess;
 namespace UniversityApiBackend.Migrations
 {
     [DbContext(typeof(UniversityDBContext))]
-    [Migration("20221102152235_Create Cursos table")]
-    partial class CreateCursostable
+    [Migration("20221107163807_Create Courses Table")]
+    partial class CreateCoursesTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,7 @@ namespace UniversityApiBackend.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Curso", b =>
+            modelBuilder.Entity("UniversityApiBackend.Models.DataModels.Course", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -58,7 +58,7 @@ namespace UniversityApiBackend.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("Nivel")
+                    b.Property<int>("Level")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombre")
@@ -86,7 +86,7 @@ namespace UniversityApiBackend.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cursos");
+                    b.ToTable("Courses");
                 });
 
             modelBuilder.Entity("UniversityApiBackend.Models.DataModels.User", b =>

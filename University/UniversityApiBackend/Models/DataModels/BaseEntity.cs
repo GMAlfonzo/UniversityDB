@@ -16,6 +16,5 @@ namespace UniversityApiBackend.Models.DataModels
         public DateTime? DeletedAt { get; set; }
         public bool IsDeleted { get; set; } = false;
 
-
     }
 }
