@@ -16,5 +16,21 @@ namespace UniversityApiBackend.Models.DataModels
 
         [Required]
         public string Password { get; set; } = string.Empty;
+
+        [Required]
+        public ICollection<BaseEntity> BaseEntities { get; set; } = new List<BaseEntity>();
+
+        [Required]
+        public ICollection<Course> Courses { get; set; } = new List<Course>();
+
+        [Required]
+        public ICollection<Student> Students { get; set; } = new List<Student>();
+
+        [Required]
+        public ICollection<Chapter> Chapters { get; set; } = new List<Chapter>();
+
+        [Required]
+        public ICollection<Category> Categories{ get; set; } = new List<Category>();
+
     }
 }
